@@ -1,6 +1,9 @@
-"use strict";
+import { TaskCollection, foo } from "./TaskCollection";
 
-const months = Object.freeze(['jan', 'feb']);
-months.push('element1');
+new TaskCollection([
+    'Go to store',
+    'Finish tutorial',
+    'Sleep well'
+]).dump();
 
-console.log(months);
+console.log(foo);

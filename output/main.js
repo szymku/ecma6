@@ -1,6 +1,19 @@
-"use strict";
+var TaskCollection = function TaskCollection(tasks) {
+    if ( tasks === void 0 ) tasks = [];
 
-var months = Object.freeze(['jan', 'feb']);
-months.push('element1');
+    this.tasks = tasks;
+};
 
-console.log(months);
+TaskCollection.prototype.dump = function dump () {
+    console.log(this.tasks);
+};
+
+var foo = 'bar';
+
+new TaskCollection([
+    'Go to store',
+    'Finish tutorial',
+    'Sleep well'
+]).dump();
+
+console.log(foo);
